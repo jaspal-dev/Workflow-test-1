@@ -55,13 +55,13 @@ jobs:
           npm run build
 
 
-  deploy:
+  deploy-code:
     needs: build
-    name: deploy
+    name: deploy-code
     runs-on: ubuntu-latest
     steps:
       - name: deploy code
       - uses: actions/upload-artifact@v4
         with:
-          name: deploy
+          name: build
       - run: echo "Deployment Successfull"
