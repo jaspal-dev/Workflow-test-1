@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install
+      - run: npm install --prefer-offline
       - run: |
           npm run lint
 
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install
+      - run: npm install --prefer-offline
       - run: |
           npm run test
 
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install
+      - run: npm install --prefer-offline
       - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
